@@ -15,7 +15,7 @@ public class ImageService {
     @Autowired
     ImageRepository imageRepository2;
 
-    public Image addImage(Integer blogId, String description, String dimensions) throws Exception{
+    public Image addImage(Integer blogId, String description, String dimensions) {
         //add an image to the blog
         Image image = new Image();
 
