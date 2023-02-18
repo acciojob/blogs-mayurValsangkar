@@ -78,6 +78,6 @@ public class ImageService {
 
         int count = (int)Math.floor(totalArea/area);
 
-        return totalArea%area==0 ? count : count-1;
+        return count;
     }
 }
