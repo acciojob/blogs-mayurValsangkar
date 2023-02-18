@@ -21,7 +21,7 @@ public class Blog {
 
     private String content;
 
-    @CreatedDate
+    @CreationTimestamp
     private Date pubDate;
 
     // Blog is child w.r.t user
