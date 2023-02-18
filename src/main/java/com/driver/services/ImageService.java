@@ -15,7 +15,7 @@ public class ImageService {
     @Autowired
     ImageRepository imageRepository2;
 
-    public Image addImage(Integer blogId, String description, String dimensions){
+    public Image addImage(Integer blogId, String description, String dimensions) throws Exception{
         //add an image to the blog
         Image image = new Image();
 
@@ -23,6 +23,10 @@ public class ImageService {
         image.setDimensions(dimensions);
 
         Blog blog = blogRepository2.findById(blogId).get();
+
+        if(blog==null){
+            throw new Exception("Blog is not found");
+        }
 
         image.setBlog(blog);
 
