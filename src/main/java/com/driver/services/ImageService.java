@@ -24,10 +24,6 @@ public class ImageService {
 
         Blog blog = blogRepository2.findById(blogId).get();
 
-        if(blog==null){
-            throw new Exception("Blog is not found");
-        }
-
         image.setBlog(blog);
 
         List<Image> imageList = blog.getImageList();
@@ -35,7 +31,7 @@ public class ImageService {
         blog.setImageList(imageList);
 
         blogRepository2.save(blog);
-        //imageRepository2.save(image);
+        //imageRepository2.save(image);  // image will be saved by cascading effect
 
         return image;
     }
