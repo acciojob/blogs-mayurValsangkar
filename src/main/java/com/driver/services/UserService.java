@@ -19,7 +19,7 @@ public class UserService {
 
         user.setFirstName("test");
         user.setLastName("test");
-        user.setUserName(username);
+        user.setUsername(username);
         user.setPassword(password);
         userRepository3.save(user);
 

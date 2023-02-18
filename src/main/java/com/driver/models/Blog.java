@@ -21,7 +21,7 @@ public class Blog {
     private String content;
 
     @CreationTimestamp
-    private Date date;
+    private Date pubDate;
 
     // Blog is child w.r.t user
     // Setting here the foreign key
@@ -31,7 +31,7 @@ public class Blog {
 
 
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
-    private List<Image> blogImages = new ArrayList<>();
+    private List<Image> imageList = new ArrayList<>();
 
 
     public Blog() {
@@ -69,11 +69,19 @@ public class Blog {
         this.user = user;
     }
 
-    public List<Image> getBlogImages() {
-        return blogImages;
+    public List<Image> getImageList() {
+        return imageList;
     }
 
-    public void setBlogImages(List<Image> blogImages) {
-        this.blogImages = blogImages;
+    public void setImageList(List<Image> imageList) {
+        this.imageList = imageList;
+    }
+
+    public Date getPubDate() {
+        return pubDate;
+    }
+
+    public void setPubDate(Date pubDate) {
+        this.pubDate = pubDate;
     }
 }

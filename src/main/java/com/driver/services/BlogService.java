@@ -32,9 +32,9 @@ public class BlogService {
         blog.setContent(content);
         blogRepository1.save(blog);
 
-        List<Blog> blogList = user.getBlogsWritten();
+        List<Blog> blogList = user.getBlogList();
         blogList.add(blog);
-        user.setBlogsWritten(blogList);
+        user.setBlogList(blogList);
 
         return blog;
     }
