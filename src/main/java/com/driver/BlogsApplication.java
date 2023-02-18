@@ -6,6 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BlogsApplication {
     public static void main(String[] args) throws Exception{
-        SpringApplication.run(BlogsApplication.class, args);
+        try {
+            SpringApplication.run(BlogsApplication.class, args);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
