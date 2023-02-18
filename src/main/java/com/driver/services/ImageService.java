@@ -72,8 +72,8 @@ public class ImageService {
 
         int area = l2 * b2;
 
-        int count = totalArea/area;
+        int count = (int)Math.floor(totalArea/area);
 
-        return count;
+        return totalArea%area==0 ? count : count-1;
     }
 }
