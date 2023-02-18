@@ -57,10 +57,9 @@ public class ImageService {
         int l2 = Integer.valueOf(dimensionArray[0]);
         int b2 = Integer.valueOf(dimensionArray[1]);
 
-        int totalArea = l1*b1;
-        int area = l2*b2;
+        int l = l1 / l2;
+        int b = b1 / b2;
 
-        int count = totalArea/area;
-        return count;
+        return l*b;
     }
 }
