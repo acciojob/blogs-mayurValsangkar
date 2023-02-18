@@ -2,6 +2,7 @@ package com.driver.models;
 
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class Blog {
 
     private String content;
 
-    @CreationTimestamp
+    @CreatedDate
     private Date pubDate;
 
     // Blog is child w.r.t user
